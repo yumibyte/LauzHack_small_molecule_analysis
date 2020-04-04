@@ -1,0 +1,5 @@
+NAME,SMILES,Mr,LogP,HBD,HBA,SIMILARITY
+Galidesivir,[H][C@]1(O)CN(CC2=CNC3=C(N)N=CN=C23)C[C@]1([H])CSC,293.39,0.56,3,4,0.264
+Favipiravir,N#C[C@]1(O[C@@H]([C@H]([C@H]1O)O)COP(=O)(Oc1ccccc1)NC)c1ccc2n1ncnc2N,194.15,-0.84,1,5,0.065
+Remdesivir,N#C[C@]1(O[C@@H]([C@H]([C@H]1O)O)COP(=O)(Oc1ccccc1)NC)c1ccc2n1ncnc2N,460.38,-0.2,4,10,
+Ribavidin Triphosphate,O[C@@H]1[C@@H](COP(=O)(OP(=O)(OP(=O)(O)O)O)O)O[C@H]([C@@H]1O)N1CN(c2c1[nH]c(N)nc2=O)C,539.22,-4.34,8,15,
