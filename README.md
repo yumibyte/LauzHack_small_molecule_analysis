@@ -35,6 +35,9 @@ https://www.preprints.org/manuscript/202002.0242/v1
 https://www.youtube.com/watch?v=6doVRePMHEg
 (58:00 export results as a CSV, we might be able to process this with ML)
 
+ (Passive gastro-intestinal (HIA) absorption and blood-brain barrier (BBB) permeation are predicted with the BOILED-Egg model) - great explanations on QSPR for SwissADME
+ https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5335600/
+ 
 # Notes
 -A docking experiment is where you have your target protein and your small molecule that you want to check whether it binds and how strongly.
 
