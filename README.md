@@ -15,7 +15,7 @@ https://www.sciencenews.org/article/coronavirus-covid19-repurposed-treatments-dr
 (score functions based on affinity classified in this paper)
 https://www.preprints.org/manuscript/202002.0242/v1
 # Software being used
--SwissADME (input the parent drug structure and it searches possible analogues) Docking
+-SwissADME (input the parent drug structure and it searches possible analogues) 
 
 # Possible important information
 (Youtube explanation of SwissADME)
