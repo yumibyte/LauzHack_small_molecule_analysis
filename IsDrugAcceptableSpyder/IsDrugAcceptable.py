@@ -34,11 +34,12 @@ class Application(tk.Frame):
         self.soluble_lbl = Label(self, text = "Water Soluble:")
         self.bioav_lbl = Label(self, text = "Bioavailability score:")
         self.rot_lbl = Label(self, text = "Num Rot Bonds:")
-        self.createCSV = Button(self, text="convert to .csv", command=self.create_csv)
+        self.createCSV = Button(self, text="analyze", command=self.process)
         self.result_lbl = Label(self, text = "Result") 
         
         
-        # grid method to arrange labels in respective 
+        
+       # grid method to arrange labels in respective 
         # rows and columns as specified 
         self.name_lbl.grid(row = 0, column = 0, sticky = W, pady = 2) 
         self.smiles_lbl.grid(row = 1, column = 0, sticky = W, pady = 2) 
@@ -52,6 +53,7 @@ class Application(tk.Frame):
         self.createCSV.grid(row = 9, column = 0, sticky = W, pady = 2)
         self.result_lbl.grid(row = 10, column = 0, sticky = W, pady = 2)
         
+
         # entry widgets, used to take entry from user 
         self.e1 = Entry(self) 
         self.e2 = Entry(self) 
@@ -63,7 +65,7 @@ class Application(tk.Frame):
         self.e8 = Entry(self) 
         self.e9 = Entry(self) 
         self.e10 = Entry(self)
-        
+
         # this will arrange entry widgets 
         self.e1.grid(row = 0, column = 1, pady = 2) 
         self.e2.grid(row = 1, column = 1, pady = 2) 
@@ -75,10 +77,8 @@ class Application(tk.Frame):
         self.e8.grid(row = 7, column = 1, pady = 2)
         self.e9.grid(row = 8, column = 1, pady = 2)
         self.e10.grid(row = 9, column = 1, pady = 2)
-        
-        
     
-    def create_csv(self):
+    def process(self):
         
         # turn all inputs into an array in prep for .csv
         self.arr = [[self.e3.get(), self.e4.get(), self.e5.get(), self.e6.get(), self.e7.get(), self.e8.get(), self.e9.get()]]
@@ -151,6 +151,12 @@ class Application(tk.Frame):
         # Making the Confusion Matrix
         from sklearn.metrics import confusion_matrix
         cm = confusion_matrix(y_test, y_pred)
+        print(new_prediction)
+        
+        #self.display_text.set(new_prediction)
+        
+        
+    
 
         
 root = tk.Tk()
@@ -161,8 +167,6 @@ root.geometry('600x600')
 
 
 root.mainloop()
-
-print(e1)
 
 
 """
