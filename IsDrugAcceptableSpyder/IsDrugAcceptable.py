@@ -7,8 +7,9 @@ Created on Sun Apr  5 10:42:20 2020
 
     
 # Creating GUI
+ 
+from tkinter import *
 import tkinter as tk
-from tkinter.filedialog import askopenfilename
 import pandas as pd
 
 class Application(tk.Frame):
@@ -17,24 +18,55 @@ class Application(tk.Frame):
         
     def __init__(self, master):
         tk.Frame.__init__(self, master)
-        self.grid()
+        self.pack()
         self.create_widgets()
     
     def create_widgets(self):
-        self.topiclbl = tk.Label(self, text='Import .csv file with drug data', font=(12))
-        self.topiclbl.grid()
-        self.browseButton_CSV = tk.Button(self,text="      Import CSV File     ", command=self.getCSV, bg='green', fg='white', font=('helvetica', 12, 'bold'))
-        self.browseButton_CSV.grid()
         
-        self.topiclbl = tk.Label(self, text='Analyze .csv', font=(12))
-        self.topiclbl.grid()
-        self.browseButton_CSV = tk.Button(self,text="      Analyze     ", command=self.MLModel, bg='green', fg='white', font=('helvetica', 12, 'bold'))
-        self.browseButton_CSV.grid()
-        
-    def getCSV(v):
-    
-        csv_file_path = askopenfilename()
-        return csv_file_path
+        # label widget
+        self.name_lbl = Label(self, text = "Name:")
+        self.smiles_lbl = Label(self, text = "SMILES:")
+        self.mw_lbl = Label(self, text = "Molecular Weight:")
+        self.tpsa_lbl = Label(self, text = "TPSA:")
+        self.wlogp_lbl = Label(self, text = "WLOGP:")
+        self.logp_lbl = Label(self, text = "LogP:")
+        self.soluble_lbl = Label(self, text = "Water Soluble:")
+        self.bioav_lbl = Label(self, text = "Bioavailability score:")
+        self.rot_lbl = Label(self, text = "Num Rot Bonds:")
+
+        # grid method to arrange labels in respective 
+        # rows and columns as specified 
+        self.name_lbl.grid(row = 0, column = 0, sticky = W, pady = 2) 
+        self.smiles_lbl.grid(row = 1, column = 0, sticky = W, pady = 2) 
+        self.mw_lbl.grid(row = 2, column = 0, sticky = W, pady = 2) 
+        self.tpsa_lbl.grid(row = 3, column = 0, sticky = W, pady = 2) 
+        self.wlogp_lbl.grid(row = 4, column = 0, sticky = W, pady = 2) 
+        self.logp_lbl.grid(row = 5, column = 0, sticky = W, pady = 2) 
+        self.soluble_lbl.grid(row = 6, column = 0, sticky = W, pady = 2) 
+        self.bioav_lbl.grid(row = 7, column = 0, sticky = W, pady = 2) 
+        self.rot_lbl.grid(row = 8, column = 0, sticky = W, pady = 2) 
+
+        # entry widgets, used to take entry from user 
+        self.e1 = Entry(self) 
+        self.e2 = Entry(self) 
+        self.e3 = Entry(self) 
+        self.e4 = Entry(self) 
+        self.e5 = Entry(self) 
+        self.e6 = Entry(self) 
+        self.e7 = Entry(self) 
+        self.e8 = Entry(self) 
+        self.e9 = Entry(self) 
+          
+        # this will arrange entry widgets 
+        self.e1.grid(row = 0, column = 1, pady = 2) 
+        self.e2.grid(row = 1, column = 1, pady = 2) 
+        self.e3.grid(row = 2, column = 1, pady = 2)
+        self.e4.grid(row = 3, column = 1, pady = 2)
+        self.e5.grid(row = 4, column = 1, pady = 2)
+        self.e6.grid(row = 5, column = 1, pady = 2)
+        self.e7.grid(row = 6, column = 1, pady = 2)
+        self.e8.grid(row = 7, column = 1, pady = 2)
+        self.e9.grid(row = 8, column = 1, pady = 2)
     
     def MLModel(v):
         # Importing the libraries for ML
@@ -103,7 +135,6 @@ app = Application(master=root)
 root.title("LauzHack Project")
 canvas1 = tk.Canvas(root, width=300, height=300, bg='lightsteelblue2', relief='raised')
 root.geometry('600x600')
-v = tk.StringVar()
 
 
 root.mainloop()
