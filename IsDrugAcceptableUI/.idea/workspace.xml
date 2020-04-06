@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="075ac66c-fae1-4b2a-9e7a-87d6bd74ff95" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../IsDrugAcceptableSpyder/IsDrugAcceptable.py" beforeDir="false" afterPath="$PROJECT_DIR$/../IsDrugAcceptableSpyder/IsDrugAcceptable.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserInterface.py" beforeDir="false" afterPath="$PROJECT_DIR$/UserInterface.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserInterfaceModified.py" beforeDir="false" afterPath="$PROJECT_DIR$/UserInterfaceModified.py" afterDir="false" />
-    </list>
+    <list default="true" id="075ac66c-fae1-4b2a-9e7a-87d6bd74ff95" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,8 +25,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/UserInterfaceModified.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+            <state relative-caret-position="300">
+              <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-end-line="16" />
               <folding>
                 <element signature="e#16#36#0" expanded="true" />
               </folding>
@@ -67,8 +62,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-19" />
-    <option name="y" value="23" />
+    <option name="x" value="43" />
+    <option name="y" value="25" />
     <option name="width" value="1312" />
     <option name="height" value="1340" />
   </component>
@@ -194,7 +189,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-19" y="23" width="1312" height="1340" extended-state="0" />
+    <frame x="43" y="25" width="1312" height="1340" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15724245" />
@@ -243,8 +238,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/UserInterfaceModified.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="300">
+          <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-end-line="16" />
           <folding>
             <element signature="e#16#36#0" expanded="true" />
           </folding>

@@ -28,7 +28,7 @@ class Application(tk.Frame):
         
         self.topiclbl = tk.Label(self, text='Analyze .csv', font=(12))
         self.topiclbl.grid()
-        self.browseButton_CSV = tk.Button(self,text="      Analyze     ", command=MLModel, bg='green', fg='white', font=('helvetica', 12, 'bold'))
+        self.browseButton_CSV = tk.Button(self,text="      Analyze     ", command=self.MLModel, bg='green', fg='white', font=('helvetica', 12, 'bold'))
         self.browseButton_CSV.grid()
         
     def getCSV(v):
