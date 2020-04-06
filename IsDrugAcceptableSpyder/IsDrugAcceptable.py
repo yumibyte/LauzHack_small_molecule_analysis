@@ -23,6 +23,7 @@ class Application(tk.Frame):
     
     def create_widgets(self):
         
+        
         # label widget
         self.name_lbl = Label(self, text = "Name:")
         self.smiles_lbl = Label(self, text = "SMILES:")
@@ -33,7 +34,8 @@ class Application(tk.Frame):
         self.soluble_lbl = Label(self, text = "Water Soluble:")
         self.bioav_lbl = Label(self, text = "Bioavailability score:")
         self.rot_lbl = Label(self, text = "Num Rot Bonds:")
-
+        
+        self.createCSV = Button(self, text="convert to .csv", command=self.create_csv)
         # grid method to arrange labels in respective 
         # rows and columns as specified 
         self.name_lbl.grid(row = 0, column = 0, sticky = W, pady = 2) 
@@ -45,7 +47,8 @@ class Application(tk.Frame):
         self.soluble_lbl.grid(row = 6, column = 0, sticky = W, pady = 2) 
         self.bioav_lbl.grid(row = 7, column = 0, sticky = W, pady = 2) 
         self.rot_lbl.grid(row = 8, column = 0, sticky = W, pady = 2) 
-
+        self.createCSV.grid(row = 9, column = 0, sticky = W, pady = 2)
+        
         # entry widgets, used to take entry from user 
         self.e1 = Entry(self) 
         self.e2 = Entry(self) 
@@ -56,7 +59,6 @@ class Application(tk.Frame):
         self.e7 = Entry(self) 
         self.e8 = Entry(self) 
         self.e9 = Entry(self) 
-          
         # this will arrange entry widgets 
         self.e1.grid(row = 0, column = 1, pady = 2) 
         self.e2.grid(row = 1, column = 1, pady = 2) 
@@ -67,7 +69,12 @@ class Application(tk.Frame):
         self.e7.grid(row = 6, column = 1, pady = 2)
         self.e8.grid(row = 7, column = 1, pady = 2)
         self.e9.grid(row = 8, column = 1, pady = 2)
+        
+        
+        return [self.e1, self.e2, self.e3, self.e4, self.e5, self.e6, self.e7, self.e8, self.e9]
     
+    def create_csv(array):
+        print(array)
     def MLModel(v):
         # Importing the libraries for ML
         import numpy as np
@@ -138,6 +145,8 @@ root.geometry('600x600')
 
 
 root.mainloop()
+
+print(e1)
 
 
 """
