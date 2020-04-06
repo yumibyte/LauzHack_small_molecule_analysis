@@ -11,7 +11,7 @@ Created on Sun Apr  5 10:42:20 2020
 from tkinter import *
 import tkinter as tk
 import pandas as pd
-
+import numpy 
 class Application(tk.Frame):
     
 
@@ -34,8 +34,10 @@ class Application(tk.Frame):
         self.soluble_lbl = Label(self, text = "Water Soluble:")
         self.bioav_lbl = Label(self, text = "Bioavailability score:")
         self.rot_lbl = Label(self, text = "Num Rot Bonds:")
-        
         self.createCSV = Button(self, text="convert to .csv", command=self.create_csv)
+        self.result_lbl = Label(self, text = "Result") 
+        
+        
         # grid method to arrange labels in respective 
         # rows and columns as specified 
         self.name_lbl.grid(row = 0, column = 0, sticky = W, pady = 2) 
@@ -48,6 +50,7 @@ class Application(tk.Frame):
         self.bioav_lbl.grid(row = 7, column = 0, sticky = W, pady = 2) 
         self.rot_lbl.grid(row = 8, column = 0, sticky = W, pady = 2) 
         self.createCSV.grid(row = 9, column = 0, sticky = W, pady = 2)
+        self.result_lbl.grid(row = 10, column = 0, sticky = W, pady = 2)
         
         # entry widgets, used to take entry from user 
         self.e1 = Entry(self) 
@@ -59,6 +62,8 @@ class Application(tk.Frame):
         self.e7 = Entry(self) 
         self.e8 = Entry(self) 
         self.e9 = Entry(self) 
+        self.e10 = Entry(self)
+        
         # this will arrange entry widgets 
         self.e1.grid(row = 0, column = 1, pady = 2) 
         self.e2.grid(row = 1, column = 1, pady = 2) 
@@ -69,13 +74,20 @@ class Application(tk.Frame):
         self.e7.grid(row = 6, column = 1, pady = 2)
         self.e8.grid(row = 7, column = 1, pady = 2)
         self.e9.grid(row = 8, column = 1, pady = 2)
+        self.e10.grid(row = 9, column = 1, pady = 2)
         
         
-        return [self.e1, self.e2, self.e3, self.e4, self.e5, self.e6, self.e7, self.e8, self.e9]
     
-    def create_csv(array):
-        print(array)
-    def MLModel(v):
+    def create_csv(self):
+        
+        # turn all inputs into an array in prep for .csv
+        self.arr = [self.e1.get(), self.e2.get(), self.e3.get(), self.e4.get(), self.e5.get(), self.e6.get(), self.e7.get(), self.e8.get(), self.e9.get()]
+        #print(self.arr)
+        a = numpy.asarray(self.arr)
+        numpy.savetxt("DrugInputFromUser.csv", a, fmt = '%s')
+        self.MLModel()
+        
+    def MLModel():
         # Importing the libraries for ML
         import numpy as np
         import matplotlib.pyplot as plt
