@@ -4,7 +4,7 @@ These models are utilized to identify whether new drugs can be appropriately use
 
 ## IsDrugAcceptable Usage
 
-'''
+'''bash
 open the IsDrugAcceptable
 '''
 
@@ -12,7 +12,7 @@ Set the working directory to the folder with the DataModified.csv file.This is t
 
 ## SMILESAnalysis Usage
 
-'''
+'''python
 open eval.py
 
 '''
