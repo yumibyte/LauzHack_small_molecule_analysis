@@ -2,9 +2,50 @@
 # -*- coding: utf-8 -*-
 """
 Created on Sun Apr  5 10:42:20 2020
-
 @author: ashleyraigosa
 """
+
+# Creating GUI
+import tkinter as tk
+from tkinter import filedialog
+import pandas as pd
+
+class Application(tk.Frame):
+    
+
+        
+    def __init__(self, master):
+        tk.Frame.__init__(self, master)
+        self.grid()
+        self.create_widgets()
+    
+    def create_widgets(self):
+        self.topiclbl = tk.Label(self, text='Import .csv file with drug data', font=(12))
+        self.topiclbl.grid()
+        self.browseButton_CSV = tk.Button(self,text="      Import CSV File     ", command=self.getCSV, bg='green', fg='white', font=('helvetica', 12, 'bold'))
+        self.browseButton_CSV.grid()
+        
+    def getCSV(file):
+        global df
+    
+        import_file_path = filedialog.askopenfilename()
+        df = pd.read_csv (import_file_path)
+        return df
+    
+
+root = tk.Tk()
+app = Application(master=root)
+root.title("LauzHack Project")
+canvas1 = tk.Canvas(root, width=300, height=300, bg='lightsteelblue2', relief='raised')
+#canvas1.create_window(150, 150, window=app.browseButton_CSV)
+
+root.geometry('600x600')
+
+
+
+root.mainloop()
+print(df)
+
 
 
 # Importing the libraries
@@ -55,10 +96,10 @@ classifier.add(Dense(output_dim = 4, init = 'uniform', activation = 'relu'))
 classifier.add(Dense(output_dim = 1, init = 'uniform', activation = 'sigmoid'))
 
 # Compiling the ANN
-classifier.compile(optimizer = 'rmsprop', loss = 'binary_crossentropy', metrics = ['accuracy'])
+classifier.compile(optimizer = 'adam', loss = 'binary_crossentropy', metrics = ['accuracy'])
 
 # Fitting ANN to Training set
-classifier.fit(X_train, y_train, batch_size = 2, nb_epoch = 4)
+classifier.fit(X_train, y_train, batch_size = 5, nb_epoch = 4)
 
 # Predicting the Test set results
 y_pred = classifier.predict(X_test)
@@ -69,9 +110,6 @@ from sklearn.metrics import confusion_matrix
 cm = confusion_matrix(y_test, y_pred)
 
 
-
-
-
 # Tuning the ANN
 from keras.wrappers.scikit_learn import KerasClassifier
 from sklearn.model_selection import GridSearchCV
@@ -80,7 +118,7 @@ from keras.layers import Dense
 
 def build_classifier(optimizer): 
     classifier = Sequential()
-    classifier.add(Dense(output_dim = 3, init = 'uniform', activation = 'relu', input_dim = 7))
+    classifier.add(Dense(output_dim = 3, init = 'uniform', activation = 'relu', input_dim = 8))
     classifier.add(Dense(output_dim = 3, init = 'uniform', activation = 'relu'))
     classifier.add(Dense(output_dim = 1, init = 'uniform', activation = 'sigmoid'))
     classifier.compile(optimizer = optimizer, loss = 'binary_crossentropy', metrics = ['accuracy'])
@@ -88,7 +126,7 @@ def build_classifier(optimizer):
 
 classifier = KerasClassifier(build_fn = build_classifier)
 parameters = {'batch_size': [2, 4],
-              'nb_epoch': [4, 8],
+              'nb_epoch': [4, ],
               'optimizer': ['adam', 'rmsprop']}
 grid_search = GridSearchCV(estimator = classifier, 
                            param_grid = parameters,

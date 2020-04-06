@@ -42,3 +42,10 @@ entry = tk.Entry(win, textvariable=v).grid(row=0, column=1)
 
 
 win.mainloop()
+
+
+
+
+
+tk.Button(self, text="      Import CSV File     ", command=getCSV, bg='green', fg='white',
+                                 font=('helvetica', 12, 'bold'))
