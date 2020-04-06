@@ -1,0 +1,200 @@
+Favipiravir
+1
+Damerau-Levenshtein^: 77
+Levenshtein^: 77
+Overlap*: 0.6111111111111112
+Longest Common Subsequence*: 9
+Longest Common Substring*: 4
+Gestalt Pattern Matching*: 0.17307692307692307
+
+________________________________
+Remdesivir
+1
+Damerau-Levenshtein^: 62
+Levenshtein^: 65
+Overlap*: 0.7209302325581395
+Longest Common Subsequence*: 43
+Longest Common Substring*: 13
+Gestalt Pattern Matching*: 0.3707865168539326
+
+________________________________
+Ribavirin Triphosphate
+1
+Damerau-Levenshtein^: 48
+Levenshtein^: 51
+Overlap*: 0.8313253012048193
+Longest Common Subsequence*: 52
+Longest Common Substring*: 18
+Gestalt Pattern Matching*: 0.6153846153846154
+
+________________________________
+Galidesivir
+1
+Damerau-Levenshtein^: 67
+Levenshtein^: 67
+Overlap*: 0.76
+Longest Common Subsequence*: 25
+Longest Common Substring*: 9
+Gestalt Pattern Matching*: 0.36764705882352944
+
+________________________________
+analogue 1
+1
+Damerau-Levenshtein^: 68
+Levenshtein^: 69
+Overlap*: 0.92
+Longest Common Subsequence*: 26
+Longest Common Substring*: 3
+Gestalt Pattern Matching*: 0.19117647058823528
+
+________________________________
+analogue 2
+0
+Damerau-Levenshtein^: 59
+Levenshtein^: 61
+Overlap*: 0.7761194029850746
+Longest Common Subsequence*: 34
+Longest Common Substring*: 4
+Gestalt Pattern Matching*: 0.3660130718954248
+
+________________________________
+analogue 3
+0
+Damerau-Levenshtein^: 54
+Levenshtein^: 56
+Overlap*: 0.7945205479452054
+Longest Common Subsequence*: 42
+Longest Common Substring*: 4
+Gestalt Pattern Matching*: 0.33962264150943394
+
+________________________________
+analogue 4
+0
+Damerau-Levenshtein^: 55
+Levenshtein^: 56
+Overlap*: 0.9230769230769231
+Longest Common Subsequence*: 38
+Longest Common Substring*: 7
+Gestalt Pattern Matching*: 0.42028985507246375
+
+________________________________
+analogue 5
+1
+Damerau-Levenshtein^: 51
+Levenshtein^: 53
+Overlap*: 0.9651162790697675
+Longest Common Subsequence*: 62
+Longest Common Substring*: 7
+Gestalt Pattern Matching*: 0.4175824175824176
+
+________________________________
+analogue 6
+1
+Damerau-Levenshtein^: 68
+Levenshtein^: 68
+Overlap*: 0.9629629629629629
+Longest Common Subsequence*: 20
+Longest Common Substring*: 3
+Gestalt Pattern Matching*: 0.35398230088495575
+
+________________________________
+Riboflavin
+1
+Damerau-Levenshtein^: 60
+Levenshtein^: 62
+Overlap*: 0.7619047619047619
+Longest Common Subsequence*: 33
+Longest Common Substring*: 7
+Gestalt Pattern Matching*: 0.3624161073825503
+
+________________________________
+Cyanidin
+1
+Damerau-Levenshtein^: 72
+Levenshtein^: 73
+Overlap*: 0.5609756097560976
+Longest Common Subsequence*: 15
+Longest Common Substring*: 3
+Gestalt Pattern Matching*: 0.2204724409448819
+
+________________________________
+Genistein
+1
+Damerau-Levenshtein^: 72
+Levenshtein^: 72
+Overlap*: 0.4722222222222222
+Longest Common Subsequence*: 14
+Longest Common Substring*: 3
+Gestalt Pattern Matching*: 0.19672131147540983
+
+________________________________
+Analogue 7
+0
+Damerau-Levenshtein^: 50
+Levenshtein^: 53
+Overlap*: 0.8518518518518519
+Longest Common Subsequence*: 46
+Longest Common Substring*: 5
+Gestalt Pattern Matching*: 0.4550898203592814
+
+________________________________
+Analogue 8
+0
+Damerau-Levenshtein^: 85
+Levenshtein^: 87
+Overlap*: 0.8837209302325582
+Longest Common Subsequence*: 56
+Longest Common Substring*: 4
+Gestalt Pattern Matching*: 0.21524663677130046
+
+________________________________
+Analogue 9
+0
+Damerau-Levenshtein^: 63
+Levenshtein^: 64
+Overlap*: 0.9310344827586207
+Longest Common Subsequence*: 23
+Longest Common Substring*: 4
+Gestalt Pattern Matching*: 0.3652173913043478
+
+________________________________
+Analogue 10
+1
+Damerau-Levenshtein^: 51
+Levenshtein^: 52
+Overlap*: 0.7058823529411765
+Longest Common Subsequence*: 39
+Longest Common Substring*: 13
+Gestalt Pattern Matching*: 0.42857142857142855
+
+________________________________
+ATP
+1
+Damerau-Levenshtein^: 0
+Levenshtein^: 0
+Overlap*: 1
+Longest Common Subsequence*: 86
+Longest Common Substring*: 86
+Gestalt Pattern Matching*: 1
+
+________________________________
+Analogue 11
+1
+Damerau-Levenshtein^: 53
+Levenshtein^: 54
+Overlap*: 0.7380952380952381
+Longest Common Subsequence*: 45
+Longest Common Substring*: 13
+Gestalt Pattern Matching*: 0.4117647058823529
+
+________________________________
+Analogue 12
+
+Damerau-Levenshtein^: 79
+Levenshtein^: 79
+Overlap*: 1.0
+Longest Common Subsequence*: 7
+Longest Common Substring*: 2
+Gestalt Pattern Matching*: 0.10416666666666667
+
+________________________________
