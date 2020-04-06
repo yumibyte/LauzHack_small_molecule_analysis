@@ -81,19 +81,19 @@ class Application(tk.Frame):
     def create_csv(self):
         
         # turn all inputs into an array in prep for .csv
-        self.arr = [self.e1.get(), self.e2.get(), self.e3.get(), self.e4.get(), self.e5.get(), self.e6.get(), self.e7.get(), self.e8.get(), self.e9.get()]
-        #print(self.arr)
-        a = numpy.asarray(self.arr)
-        numpy.savetxt("DrugInputFromUser.csv", a, fmt = '%s')
+        self.arr = [[self.e3.get(), self.e4.get(), self.e5.get(), self.e6.get(), self.e7.get(), self.e8.get(), self.e9.get()]]
+        print(self.arr)
+        #numpy.savetxt("DrugInputFromUser.csv", a, fmt = '%s')
         self.MLModel()
         
-    def MLModel():
+    def MLModel(self):
+        
         # Importing the libraries for ML
         import numpy as np
         import matplotlib.pyplot as plt
         import pandas as pd
         
-        dataset = pd.read_csv(v)
+        dataset = pd.read_csv('DataModified.csv')
         X = dataset.iloc[:, 2:9].values
         y = dataset.iloc[:, 9].values
         
@@ -145,10 +145,14 @@ class Application(tk.Frame):
         y_pred = classifier.predict(X_test)
         y_pred = (y_pred > 0.5)
         
+        new_prediction = classifier.predict(sc.transform(np.array(self.arr)))
+        new_prediction = (new_prediction > 0.5)
+
         # Making the Confusion Matrix
         from sklearn.metrics import confusion_matrix
         cm = confusion_matrix(y_test, y_pred)
 
+        
 root = tk.Tk()
 app = Application(master=root)
 root.title("LauzHack Project")
