@@ -55,10 +55,10 @@ classifier.add(Dense(output_dim = 4, init = 'uniform', activation = 'relu'))
 classifier.add(Dense(output_dim = 1, init = 'uniform', activation = 'sigmoid'))
 
 # Compiling the ANN
-classifier.compile(optimizer = 'adam', loss = 'binary_crossentropy', metrics = ['accuracy'])
+classifier.compile(optimizer = 'rmsprop', loss = 'binary_crossentropy', metrics = ['accuracy'])
 
 # Fitting ANN to Training set
-classifier.fit(X_train, y_train, batch_size = 5, nb_epoch = 4)
+classifier.fit(X_train, y_train, batch_size = 2, nb_epoch = 4)
 
 # Predicting the Test set results
 y_pred = classifier.predict(X_test)
@@ -67,3 +67,34 @@ y_pred = (y_pred > 0.5)
 # Making the Confusion Matrix
 from sklearn.metrics import confusion_matrix
 cm = confusion_matrix(y_test, y_pred)
+
+
+
+
+
+# Tuning the ANN
+from keras.wrappers.scikit_learn import KerasClassifier
+from sklearn.model_selection import GridSearchCV
+from keras.models import Sequential
+from keras.layers import Dense
+
+def build_classifier(optimizer): 
+    classifier = Sequential()
+    classifier.add(Dense(output_dim = 3, init = 'uniform', activation = 'relu', input_dim = 7))
+    classifier.add(Dense(output_dim = 3, init = 'uniform', activation = 'relu'))
+    classifier.add(Dense(output_dim = 1, init = 'uniform', activation = 'sigmoid'))
+    classifier.compile(optimizer = optimizer, loss = 'binary_crossentropy', metrics = ['accuracy'])
+    return classifier
+
+classifier = KerasClassifier(build_fn = build_classifier)
+parameters = {'batch_size': [2, 4],
+              'nb_epoch': [4, 8],
+              'optimizer': ['adam', 'rmsprop']}
+grid_search = GridSearchCV(estimator = classifier, 
+                           param_grid = parameters,
+                           scoring = 'accuracy',
+                           cv = 10)
+
+grid_search = grid_search.fit(X_train, y_train)
+best_parameters = grid_search.best_params_ 
+best_accuracy = grid_search.best_score_
